@@ -438,7 +438,6 @@ footer {
   nav { padding: 1rem 1.5rem; }
   nav .nav-brand { font-size: 1.6rem; }
   nav .nav-links { display: none; }
-  .nav-mobile-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .5rem; }
   .sec, .sec-full { padding: 4rem 1.5rem; }
   .hero-l { padding: 4rem 1.5rem 3rem; }
   .hero-r { padding: 3rem 1.5rem; }
@@ -464,16 +463,6 @@ footer {
   .f-role { font-size: .68rem; }
 }
 
-/* Mobile hamburger */
-.nav-mobile-menu {
-  display: none;
-  flex-direction: column; gap: 5px; cursor: pointer;
-  background: none; border: none; padding: .5rem;
-}
-.nav-mobile-menu span {
-  display: block; width: 24px; height: 2px; background: var(--ink);
-  transition: all .3s;
-}
 .nav-mobile-open {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
   background: var(--paper); z-index: 200;
@@ -489,6 +478,30 @@ footer {
   position: absolute; top: 1.5rem; right: 1.5rem;
   font-size: 2rem; background: none; border: none;
   color: var(--mid); cursor: pointer;
+}
+
+/* Mobile hamburger */
+.nav-mobile-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: .5rem;
+  z-index: 101;
+}
+.nav-mobile-menu span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .nav-mobile-menu { display: flex !important; }
+  nav .nav-links { display: none !important; }
 }
 </style>
 </head>
