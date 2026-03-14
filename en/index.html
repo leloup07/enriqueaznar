@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enrique Aznar — Ethical Governance for the Digital Economy</title>
 <meta name="description" content="Acompaño a consejos y equipos directivos cuando se cruzan presión regulatoria, disrupción tecnológica y crisis de confianza. Gobernanza, compliance y economía digital.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -503,6 +505,27 @@ footer {
   .nav-mobile-menu { display: flex !important; }
   nav .nav-links { display: none !important; }
 }
+
+/* Contact form */
+.ct-form { margin-top: 2.5rem; }
+.ct-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.ct-input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,162,85,0.2);
+  color: #e8e2d8; padding: .9rem 1.2rem;
+  font-family: 'DM Sans', sans-serif; font-size: .9rem;
+  width: 100%; outline: none; transition: border .2s;
+}
+.ct-input::placeholder { color: rgba(232,226,216,0.35); }
+.ct-input:focus { border-color: var(--gold); }
+.ct-input-full { width: 100%; margin-bottom: 1rem; }
+.ct-textarea { resize: vertical; min-height: 110px; }
+.ct-form-note { font-size: .75rem; color: rgba(232,226,216,0.4); margin-top: 1rem; }
+@media (max-width: 640px) { .ct-form-row { grid-template-columns: 1fr; } }
+.hero-subtitle {
+  font-size: .95rem; color: var(--mid); line-height: 1.7;
+  margin-bottom: 1.5rem; max-width: 50ch;
+}
 </style>
 </head>
 <body>
@@ -536,13 +559,14 @@ footer {
   <div class="hero-l">
     <div class="hero-eyebrow">Professor · IE University &nbsp;·&nbsp; Director · IE-Elecnor Knowledge Hub on Ethical Business</div>
     <h1>Ethical governance<br>for complex decisions<br>in the <em>digital economy.</em></h1>
+    <p class="hero-subtitle">Independent advisor for boards, technology companies and organisations operating in complex regulatory and technological environments.</p>
     <div class="hero-sub">Governance · Compliance · Digital Assets</div>
     <p class="hero-lead">I advise boards and executive teams when three tensions converge: regulatory pressure, technological disruption and trust crises. Drawing on real experience in multinationals, academia and the blockchain frontier.</p>
     <div class="hero-audience-label">Who I work with</div>
     <div class="hero-audience">
       <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Boards under regulatory pressure.</span></div>
-      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Fintech and regulated digital platforms.</span></div>
-      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Companies entering AI, tokenisation or ESG.</span></div>
+      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Fintech and regulated digital platforms (MiCA, DLT Pilot, sandbox).</span></div>
+      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Companies entering AI, tokenisation or advanced sustainability strategies.</span></div>
     </div>
     <a href="#contact" class="hero-cta">Schedule a 30-minute conversation</a>
   </div>
@@ -765,7 +789,17 @@ footer {
           <div><div class="ct-lbl">LinkedIn</div><a href="https://www.linkedin.com/in/enriqueaznar" target="_blank" class="ct-val">linkedin.com/in/enriqueaznar</a></div>
           <div><div class="ct-lbl">Based in</div><span class="ct-val" style="cursor:default">Madrid &amp; Barcelona</span></div>
         </div>
-        <a href="mailto:enrique@azlyc.com" class="ct-cta">Schedule a 30-minute conversation →</a>
+        <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="ct-form">
+          <div class="ct-form-row">
+            <input type="text" name="name" placeholder="Name" required class="ct-input">
+            <input type="email" name="email" placeholder="Email" required class="ct-input">
+          </div>
+          <input type="text" name="company" placeholder="Company / Organisation (optional)" class="ct-input ct-input-full">
+          <textarea name="message" placeholder="Message" required rows="4" class="ct-input ct-input-full ct-textarea"></textarea>
+          <button type="submit" class="ct-cta">Send message →</button>
+          <p class="ct-form-note" style="margin-top:1.5rem; color:rgba(232,226,216,0.45); font-size:.78rem;">Available for conferences, academic collaboration and advisory projects.</p>
+          <p class="ct-form-note">Or write directly to <a href="mailto:enrique@azlyc.com" style="color:var(--gold2)">enrique@azlyc.com</a></p>
+        </form>
       </div>
     </div>
   </div>

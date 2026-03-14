@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://enriqueaznar.com/sitemap.xml

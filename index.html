@@ -3,9 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enrique Aznar — Gobernanza Ética para la Economía Digital</title>
-<meta name="description" content="Acompaño a consejos y equipos directivos cuando se cruzan presión regulatoria, disrupción tecnológica y crisis de confianza. Gobernanza, compliance y economía digital.">
+<title>Enrique Aznar | Gobernanza, Compliance y Ética en la Economía Digital</title>
+<meta name="description" content="Enrique Aznar es asesor independiente en gobernanza, compliance y ética empresarial en la economía digital. Profesor y conferenciante internacional con experiencia en multinacionales y proyectos tecnológicos.">
+<meta property="og:title" content="Enrique Aznar | Gobernanza, Compliance y Ética en la Economía Digital">
+<meta property="og:description" content="Asesor independiente en gobernanza, compliance y ética empresarial en la economía digital. Profesor y conferenciante internacional.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://enriqueaznar.com">
+<meta property="og:image" content="https://enriqueaznar.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enrique Aznar | Gobernanza, Compliance y Ética en la Economía Digital">
+<meta name="twitter:description" content="Asesor independiente en gobernanza, compliance y ética empresarial en la economía digital.">
+<link rel="canonical" href="https://enriqueaznar.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -503,6 +514,27 @@ footer {
   .nav-mobile-menu { display: flex !important; }
   nav .nav-links { display: none !important; }
 }
+
+/* Contact form */
+.ct-form { margin-top: 2.5rem; }
+.ct-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.ct-input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,162,85,0.2);
+  color: #e8e2d8; padding: .9rem 1.2rem;
+  font-family: 'DM Sans', sans-serif; font-size: .9rem;
+  width: 100%; outline: none; transition: border .2s;
+}
+.ct-input::placeholder { color: rgba(232,226,216,0.35); }
+.ct-input:focus { border-color: var(--gold); }
+.ct-input-full { width: 100%; margin-bottom: 1rem; }
+.ct-textarea { resize: vertical; min-height: 110px; }
+.ct-form-note { font-size: .75rem; color: rgba(232,226,216,0.4); margin-top: 1rem; }
+@media (max-width: 640px) { .ct-form-row { grid-template-columns: 1fr; } }
+.hero-subtitle {
+  font-size: .95rem; color: var(--mid); line-height: 1.7;
+  margin-bottom: 1.5rem; max-width: 50ch;
+}
 </style>
 </head>
 <body>
@@ -536,13 +568,14 @@ footer {
   <div class="hero-l">
     <div class="hero-eyebrow">Profesor · IE University &nbsp;·&nbsp; Director · IE-Elecnor Knowledge Hub on Ethical Business</div>
     <h1>Gobernanza ética<br>para decisiones<br>complejas en la<br><em>economía digital.</em></h1>
+    <p class="hero-subtitle">Asesor independiente para consejos de administración, empresas tecnológicas y organizaciones que operan en entornos regulatorios y tecnológicos complejos.</p>
     <div class="hero-sub">Governance · Compliance · Digital Assets</div>
     <p class="hero-lead">Acompaño a consejos y equipos directivos cuando se cruzan tres tensiones: presión regulatoria, disrupción tecnológica y crisis de confianza. Desde la experiencia real en multinacionales, la academia y la frontera blockchain.</p>
     <div class="hero-audience-label">Para quién trabajo</div>
     <div class="hero-audience">
       <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Consejos de administración bajo presión regulatoria.</span></div>
-      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Fintech y plataformas digitales reguladas.</span></div>
-      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Empresas entrando en IA, tokenización o ESG.</span></div>
+      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Fintech y plataformas digitales reguladas (MiCA, DLT Pilot, sandbox).</span></div>
+      <div class="hero-audience-item"><div class="hero-audience-dot"></div><span>Empresas entrando en IA, tokenización o estrategias avanzadas de sostenibilidad.</span></div>
     </div>
     <a href="#contacto" class="hero-cta">Agenda una conversación de 30 minutos</a>
   </div>
@@ -765,7 +798,17 @@ footer {
           <div><div class="ct-lbl">LinkedIn</div><a href="https://www.linkedin.com/in/enriqueaznar" target="_blank" class="ct-val">linkedin.com/in/enriqueaznar</a></div>
           <div><div class="ct-lbl">Con base en</div><span class="ct-val" style="cursor:default">Madrid &amp; Barcelona</span></div>
         </div>
-        <a href="mailto:enrique@azlyc.com" class="ct-cta">Agenda una conversación de 30 minutos →</a>
+        <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="ct-form">
+          <div class="ct-form-row">
+            <input type="text" name="nombre" placeholder="Nombre" required class="ct-input">
+            <input type="email" name="email" placeholder="Email" required class="ct-input">
+          </div>
+          <input type="text" name="empresa" placeholder="Empresa / Organización (opcional)" class="ct-input ct-input-full">
+          <textarea name="mensaje" placeholder="Mensaje" required rows="4" class="ct-input ct-input-full ct-textarea"></textarea>
+          <button type="submit" class="ct-cta">Enviar mensaje →</button>
+          <p class="ct-form-note" style="margin-top:1.5rem; color:rgba(232,226,216,0.45); font-size:.78rem;">Disponible también para conferencias, colaboración académica y proyectos de advisory.</p>
+          <p class="ct-form-note">O escríbeme directamente a <a href="mailto:enrique@azlyc.com" style="color:var(--gold2)">enrique@azlyc.com</a></p>
+        </form>
       </div>
     </div>
   </div>
