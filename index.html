@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enrique Aznar | Gobernanza y Ética en la Economía Digital</title>
-<meta name="description" content="Enrique Aznar es asesor independiente en gobernanza, compliance y ética empresarial en la economía digital. Profesor y conferenciante internacional con experiencia en multinacionales y proyectos tecnológicos.">
+<meta name="description" content="Enrique Aznar es asesor independiente en gobernanza, compliance y ética empresarial en la economía digital. Especialista en blockchain, tokenización, gobernanza de IA, estructuración legal de DAOs, legaltech y regtech. Profesor y conferenciante internacional.">
 <meta property="og:title" content="Enrique Aznar | Gobernanza y Ética en la Economía Digital">
 <meta property="og:description" content="Asesor independiente en gobernanza, ética empresarial y economía digital. Profesor y conferenciante internacional.">
 <meta property="og:type" content="website">
@@ -162,6 +162,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .vid-src{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 .vid-title{font-size:.92rem;color:var(--ink);line-height:1.5;font-family:'Cormorant Garamond',serif;font-weight:500;flex:1}
 .vid-dur{font-size:.65rem;color:var(--mid)}
+.conf-accordion{margin-top:3rem}
+.conf-accordion summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);padding:.8rem 0;list-style:none;display:flex;align-items:center;gap:.5rem}
+.conf-accordion summary::-webkit-details-marker{display:none}
+.conf-accordion summary::before{content:'▸';transition:transform .2s;font-size:.9rem}
+.conf-accordion[open] summary::before{transform:rotate(90deg)}
+.conf-list{padding:0;margin:.5rem 0 0 0;list-style:none;display:grid;gap:.6rem}
+.conf-item{font-size:.82rem;color:var(--ink);line-height:1.6;padding:.5rem .8rem;background:var(--paper);border-left:2px solid var(--accent)}
+.conf-item .conf-venue{font-weight:600;color:var(--accent)}
+.conf-item .conf-year{font-size:.7rem;color:var(--mid);margin-left:.4rem}
 
 /* FOUNDER */
 .founder-grid{display:grid;grid-template-columns:1fr 1.7fr;gap:5rem;align-items:start}
@@ -338,11 +347,12 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
     </div>
     <div class="svc-card">
       <div class="svc-n">03</div>
-      <div class="svc-title">Conferencias y formación</div>
+      <div class="svc-title">Conferencias, formación y diseño de programas</div>
       <div class="svc-items">
-        <div class="svc-item"><div class="svc-dot"></div><span>Keynote talks en foros empresariales y académicos</span></div>
-        <div class="svc-item"><div class="svc-dot"></div><span>Programas para consejos de administración</span></div>
-        <div class="svc-item"><div class="svc-dot"></div><span>Sesiones estratégicas para equipos directivos</span></div>
+        <div class="svc-item"><div class="svc-dot"></div><span>Conferenciante internacional en foros de la OCDE, IBA, UNICEF, Bocconi, IESE y Financial Times</span></div>
+        <div class="svc-item"><div class="svc-dot"></div><span>Diseño de planes de formación a medida en compliance, gobernanza ética y sostenibilidad</span></div>
+        <div class="svc-item"><div class="svc-dot"></div><span>Programas para consejos de administración y equipos directivos</span></div>
+        <div class="svc-item"><div class="svc-dot"></div><span>Masterclasses y sesiones ejecutivas para colegios profesionales, universidades y empresas</span></div>
       </div>
     </div>
   </div>
@@ -363,14 +373,14 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
     <div class="solve-card">
       <div class="solve-n">02</div>
       <div class="solve-title">Cuando la regulación va por delante de tu modelo</div>
-      <div class="solve-body">MiCA, DLT Pilot, sandbox CNMV, CSRD, ESRS, CS3D. Traduzco marcos regulatorios complejos en decisiones de negocio concretas — no solo en documentos.</div>
-      <div class="solve-tags"><span class="solve-tag">MiCA · DLT Pilot</span><span class="solve-tag">CSRD · ESRS</span><span class="solve-tag">Sandbox CNMV</span></div>
+      <div class="solve-body">MiCA, DLT Pilot, sandbox CNMV, UK Digital Securities Sandbox, CSRD, ESRS, CS3D. Traduzco marcos regulatorios complejos en decisiones de negocio concretas — no solo en documentos. Experiencia directa presentando y operando en sandboxes regulatorios en España y Reino Unido.</div>
+      <div class="solve-tags"><span class="solve-tag">MiCA · DLT Pilot</span><span class="solve-tag">CSRD · ESRS</span><span class="solve-tag">Sandbox CNMV · UK DSS</span></div>
     </div>
     <div class="solve-card">
       <div class="solve-n">03</div>
       <div class="solve-title">Cuando la tecnología abre un agujero en tu modelo de control</div>
-      <div class="solve-body">Blockchain, tokenización de activos y gobernanza de IA. Definimos estructuras de decisión, roles y accountability donde los marcos clásicos de control interno se quedan cortos.</div>
-      <div class="solve-tags"><span class="solve-tag">Blockchain</span><span class="solve-tag">Tokenización RWA</span><span class="solve-tag">AI Governance</span></div>
+      <div class="solve-body">Blockchain, tokenización de activos, gobernanza de IA y estructuración legal de DAOs. Asesoro sobre arquitectura legal de organizaciones descentralizadas — incluyendo <em>legal wrappers</em> — y sobre adopción de herramientas de legaltech, regtech y governancetech para equipos legales, de compliance y consejos de administración.</div>
+      <div class="solve-tags"><span class="solve-tag">Blockchain</span><span class="solve-tag">Tokenización RWA</span><span class="solve-tag">AI Governance</span><span class="solve-tag">DAO · Legal Wrapper</span><span class="solve-tag">Legaltech · Regtech</span></div>
     </div>
   </div>
   <a href="#casos" class="sec-cta-link">Ver casos concretos →</a>
@@ -386,7 +396,7 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
       <div class="why-card">
         <div class="why-icon">01 · Experiencia corporativa</div>
         <div class="why-title">30 años en multinacionales</div>
-        <div class="why-body">Desde Arthur Andersen, Price Waterhouse y Freshfields hasta Dell, Tyco, Nokia Siemens, Millicom y el Management Board de VimpelCom (NASDAQ, $13.5bn). Crisis de corrupción bajo monitoría del DOJ.</div>
+        <div class="why-body">Desde Arthur Andersen, Price Waterhouse y Freshfields hasta Dell, Tyco, Nokia Siemens, Millicom y el Management Board de VimpelCom (NASDAQ, $13.5bn). Crisis de corrupción e investigación DOJ.</div>
       </div>
       <div class="why-card">
         <div class="why-icon">02 · Autoridad académica</div>
@@ -434,17 +444,17 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
           <div><div class="case-tag">Telecomunicaciones · EMEA</div></div>
           <div class="case-summary">
             <div class="case-title">Crisis de corrupción en una multinacional NASDAQ</div>
-            <div class="case-oneline">Monitoría DOJ · 10+ jurisdicciones · Management Board</div>
+            <div class="case-oneline">Investigación DOJ · 10+ jurisdicciones · Management Board</div>
           </div>
           <div style="display:flex;align-items:center;gap:1.5rem">
-            <div class="case-result-pill">Monitorship completado</div>
+            <div class="case-result-pill">Programa global reestructurado</div>
             <div class="case-toggle">+</div>
           </div>
         </div>
         <div class="case-detail">
           <div><div class="case-part-label">Situación</div><div class="case-part-text">Grupo de telecomunicaciones de $13.5bn enfrentando una crisis grave de soborno y corrupción en múltiples jurisdicciones bajo investigación DOJ.</div></div>
           <div><div class="case-part-label">Trabajo realizado</div><div class="case-part-text">Miembro del Management Board. Supervisión del diseño e implementación de la arquitectura de compliance post-crisis, gestionando la tensión entre enforcement americano y realidades operativas europeas.</div></div>
-          <div><div class="case-part-label">Resultado</div><div class="case-part-text">Cumplimiento total de la monitoría. Programa global reestructurado en más de 10 jurisdicciones.</div></div>
+          <div><div class="case-part-label">Resultado</div><div class="case-part-text">Programa global de compliance reestructurado en más de 10 jurisdicciones.</div></div>
         </div>
       </div>
       <div class="case-item">
@@ -519,6 +529,42 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
           <div><div class="case-part-label">Resultado</div><div class="case-part-text">Primer plan estratégico de sostenibilidad aprobado por el Board. Marco de reporting alineado con estándares europeos. Posicionamiento de la compañía como referente ESG en el sector de genéricos, fortaleciendo su narrativa ante inversores y reguladores.</div></div>
         </div>
       </div>
+      <div class="case-item">
+        <div class="case-header" onclick="toggleCase(this)">
+          <div><div class="case-tag">Educación Superior · Transformación Cultural · Centroamérica</div></div>
+          <div class="case-summary">
+            <div class="case-title">Transformación cultural y gobernanza ética en una universidad de referencia</div>
+            <div class="case-oneline">6.000+ estudiantes · Definición de ethos · Estructura de gobernanza · Compliance</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:1.5rem">
+            <div class="case-result-pill">Ethos y gobernanza implantados</div>
+            <div class="case-toggle">+</div>
+          </div>
+        </div>
+        <div class="case-detail">
+          <div><div class="case-part-label">Situación</div><div class="case-part-text">Universidad privada de referencia en Centroamérica, con más de 6.000 estudiantes, programas acreditados internacionalmente y una fuerte tradición de liderazgo regional. La institución necesitaba formalizar su marco ético, definir su ethos institucional y construir una estructura de gobernanza y compliance adaptada a un entorno académico — donde la cultura de control corporativa estándar no encaja.</div></div>
+          <div><div class="case-part-label">Trabajo realizado</div><div class="case-part-text">Definición participativa del ethos institucional con órganos de gobierno, claustro y comunidad universitaria. Diseño de la estructura de gobernanza ética: comité de ética, canales de denuncia, políticas de integridad académica y administrativa. Programa de formación para líderes académicos y personal directivo. Integración del marco ético con los procesos de acreditación internacional existentes.</div></div>
+          <div><div class="case-part-label">Resultado</div><div class="case-part-text">Marco ético institucional aprobado por la Junta Directiva. Estructura de gobernanza ética operativa. Programa de compliance adaptado al contexto universitario — no importado del mundo corporativo, sino construido desde la identidad de la institución.</div></div>
+        </div>
+      </div>
+      <div class="case-item">
+        <div class="case-header" onclick="toggleCase(this)">
+          <div><div class="case-tag">Colegio Profesional · Compliance · España</div></div>
+          <div class="case-summary">
+            <div class="case-title">Programa de compliance para un colegio profesional de referencia</div>
+            <div class="case-oneline">Sector regulado · Diseño integral del programa · Formación a órganos de gobierno</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:1.5rem">
+            <div class="case-result-pill">Programa implantado y operativo</div>
+            <div class="case-toggle">+</div>
+          </div>
+        </div>
+        <div class="case-detail">
+          <div><div class="case-part-label">Situación</div><div class="case-part-text">Colegio profesional con miles de colegiados, obligaciones regulatorias específicas y una exposición creciente a riesgos penales corporativos tras la reforma del Código Penal. La institución carecía de un programa de compliance estructurado y necesitaba uno que respetara la naturaleza colegial de su gobierno.</div></div>
+          <div><div class="case-part-label">Trabajo realizado</div><div class="case-part-text">Diagnóstico de riesgos penales y regulatorios específicos del sector colegial. Diseño e implantación del programa completo de compliance: código ético, mapa de riesgos, canal de denuncias, protocolos de decisión y sistema disciplinario. Programa de formación específico para la Junta de Gobierno y el equipo directivo.</div></div>
+          <div><div class="case-part-label">Resultado</div><div class="case-part-text">Programa de compliance aprobado e implantado. Órgano de cumplimiento constituido. Formación completada a todos los niveles de gobierno. Modelo replicable para otras instituciones colegiales del sector.</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -532,6 +578,8 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
     <a href="articles/cultura-corporativa-compliance-2020.pdf" target="_blank" rel="noopener" class="art-card"><div class="art-meta">Wolters Kluwer · 2020</div><h3 class="art-title">La importancia de la cultura corporativa en la prevención de riesgos de compliance</h3><p class="art-desc">Retos e ideas para la implantación de una cultura ética. Publicado en 'Mapa de riesgos penales y prevención del delito en la empresa'.</p><div class="art-arrow">→</div></a>
     <a href="articles/cultura-etica-organizaciones-ES.pdf" target="_blank" rel="noopener" class="art-card"><div class="art-meta">Aranzadi · Actualidad Compliance 2018</div><h3 class="art-title">¿Cómo y para qué crear una cultura ética en las organizaciones?</h3><p class="art-desc">Publicado en Actualidad Compliance 2018 (1ª edición), Thomson Reuters Aranzadi.</p><div class="art-arrow">→</div></a>
     <a href="https://www.ie.edu/ie-elecnor-hub-on-ethical-business/" target="_blank" rel="noopener" class="art-card art-card-dark"><div class="art-meta">IE-Elecnor Knowledge Hub on Ethical Business</div><h3 class="art-title">Director Académico · Más artículos y recursos</h3><p class="art-desc">Investigación, debates y contenidos sobre ética corporativa e innovación responsable.</p><div class="art-arrow">→ Ver todos</div></a>
+    <a href="https://culture-leap.com/" target="_blank" rel="noopener" class="art-card"><div class="art-meta">LEAP Culture &amp; Governance · Práctica profesional</div><h3 class="art-title">El modelo SMARTER: rediseño de funciones jurídicas y de compliance</h3><p class="art-desc">Cómo reorganizar una asesoría jurídica para que genere valor estratégico. Modelo co-desarrollado en una multinacional tecnológica post-crisis: clasificación del trabajo legal en tres niveles, integración compliance-negocio y resultados medibles.</p><div class="art-arrow">→</div></a>
+    <a href="https://culture-leap.com/" target="_blank" rel="noopener" class="art-card"><div class="art-meta">Advisory · Sostenibilidad digital</div><h3 class="art-title">Gobernanza ESG para empresas digitales: más allá del reporting</h3><p class="art-desc">Huella de carbono digital, debida diligencia en cadenas de valor de afiliación, y cómo las empresas data-driven pueden convertir la medición en ventaja competitiva ante clientes y reguladores.</p><div class="art-arrow">→</div></a>
 </div>
 </section>
 
@@ -568,6 +616,21 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
     <a href="https://youtu.be/HycMt0vQqI0" target="_blank" rel="noopener" class="vid-card"><div class="vid-src">YouTube</div><div class="vid-title">Global Summit: Real World Assets & Blockchain Integration</div><div class="vid-dur"></div></a>
     <a href="https://open.spotify.com/episode/7mUkj9u6Cz39AVZw0Ewhsn" target="_blank" rel="noopener" class="vid-card"><div class="vid-src">Spotify · Off the Block</div><div class="vid-title">RealFund: tokenizando en un sector tradicional como el inmobiliario</div><div class="vid-dur">Podcast</div></a>
   </div>
+  <details class="conf-accordion">
+    <summary>Conferencias internacionales seleccionadas</summary>
+    <ul class="conf-list">
+      <li class="conf-item"><span class="conf-venue">OCDE &amp; Contraloría General de Brasil</span> — "Corruption and Business: What Price do Companies Pay?" Conferencia Latinoamericana sobre Responsabilidad Corporativa. São Paulo, Brasil.<span class="conf-year">2010</span></li>
+      <li class="conf-item"><span class="conf-venue">International Bar Association (IBA)</span> — Anti-Corruption Conference. Praga.<span class="conf-year">2009</span></li>
+      <li class="conf-item"><span class="conf-venue">International Bar Association (IBA)</span> — "Doing the Right Thing". 10th Annual Group Members' Leadership Summit. Londres.<span class="conf-year">2014</span></li>
+      <li class="conf-item"><span class="conf-venue">International Bar Association (IBA) &amp; OCDE &amp; UNODC</span> — "Anti-Corruption Strategy for the Legal Profession". Madrid y Barcelona.<span class="conf-year">2013</span></li>
+      <li class="conf-item"><span class="conf-venue">UNICEF, Save the Children &amp; UN Global Compact</span> — World Child &amp; Youth Forum. Palacio Real, Estocolmo. Panelista sobre Derechos de la Infancia y Principios Empresariales.<span class="conf-year">2013</span></li>
+      <li class="conf-item"><span class="conf-venue">Università Bocconi</span> — "Ethics, Compliance and Corporate Responsibility in the Corporate World". Milán.<span class="conf-year">2010</span></li>
+      <li class="conf-item"><span class="conf-venue">ACC Europe</span> — 20th Annual Conference. "Legal and Compliance: Two Worlds or Only Two Faces of the Same Coin?" Barcelona.<span class="conf-year">2013</span></li>
+      <li class="conf-item"><span class="conf-venue">The Global Compliance Officers' Forum</span> — "Building a Stronger Ethical Culture". Luncheon Keynote. Fráncfort.<span class="conf-year">2016</span></li>
+      <li class="conf-item"><span class="conf-venue">Financial Times</span> — Anti-Corruption Conference. "Whistleblower Hotlines". Düsseldorf.<span class="conf-year">2009</span></li>
+      <li class="conf-item"><span class="conf-venue">IAE–IESE Business School</span> — "Compliance para la Alta Dirección: lo que realmente importa". Buenos Aires.<span class="conf-year">2013–2015</span></li>
+    </ul>
+  </details>
 </section>
 
 <!-- PERFIL -->
@@ -585,11 +648,11 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
         </div>
         <div>
           <div class="f-block-label">Posición académica</div>
-          <div class="f-block-text">Abogado <strong>colegiado en España e Inglaterra y Gales</strong>. Profesor en IE Law School e IE Business School. Director Académico del <strong>IE-Elecnor Knowledge Hub on Ethical Business</strong>. Formación avanzada en Oxford Saïd, IESE, IE y Stanford. Co-fundador de <strong>LEAP Culture &amp; Governance</strong>.</div>
+          <div class="f-block-text">Abogado <strong>colegiado en España e Inglaterra y Gales</strong>. Profesor en IE Law School e IE Business School. Director Académico del <strong>IE-Elecnor Knowledge Hub on Ethical Business</strong>. Formación avanzada en Oxford Saïd, IESE, IE y Stanford. Certificado en Generative AI for Business Professionals (IE University / Future Skills Labs, 2024). Co-fundador de <strong><a href="https://culture-leap.com/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)">LEAP Culture &amp; Governance</a></strong>.</div>
         </div>
         <div>
           <div class="f-block-label">Economía digital</div>
-          <div class="f-block-text">Co-fundador de <strong>RealFund</strong>, primera plataforma española de tokenización de activos reales aprobada en el Sandbox Fintech de la CNMV. Director Regional de la Government Blockchain Association en España. Asesor activo en proyectos de tokenización en España, Europa y Oriente Medio.</div>
+          <div class="f-block-text">Co-fundador de <strong>RealFund</strong>, primera plataforma española de tokenización de activos reales aprobada en el Sandbox Fintech de la CNMV. Director Regional de la Government Blockchain Association en España. Asesor activo en proyectos de tokenización en España, Europa y Oriente Medio. Partner y consultor de <strong><a href="https://www.voombu.app/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)">Voombu</a></strong>, plataforma ESG modular para reporting ESRS, gestión de riesgos y financiación sostenible.</div>
         </div>
       </div>
       <div class="f-roles">
@@ -616,7 +679,7 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
         <h2 class="ct-h2">Escríbeme en dos líneas qué está pasando en tu organización.</h2>
         <p class="ct-lead">Te propongo un marco de trabajo. Tanto si estás navegando una crisis de compliance, estructurando un proyecto de gobernanza o transformando la cultura de tu empresa.</p>
         <div class="ct-info">
-          <div><div class="ct-lbl">Email</div><a href="mailto:enrique@azlyc.com" class="ct-val">enrique@azlyc.com</a></div>
+          <div><div class="ct-lbl">Email</div><a href="/cdn-cgi/l/email-protection#1e7b706c776f6b7b5e7f6472677d307d7173" class="ct-val"><span class="__cf_email__" data-cfemail="1c79726e756d69795c7d6670657f327f7371">[email&#160;protected]</span></a></div>
           <div><div class="ct-lbl">Teléfono</div><a href="tel:+34639324678" class="ct-val">+34 639 324 678</a></div>
           <div><div class="ct-lbl">LinkedIn</div><a href="https://www.linkedin.com/in/enriqueaznar" target="_blank" class="ct-val">linkedin.com/in/enriqueaznar</a></div>
           <div><div class="ct-lbl">Con base en</div><span class="ct-val" style="cursor:default">Madrid &amp; Barcelona</span></div>
@@ -629,7 +692,7 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
           <input type="text" name="empresa" placeholder="Empresa / Organización (opcional)" class="ct-input ct-full">
           <textarea name="mensaje" placeholder="Mensaje" required rows="4" class="ct-input ct-full ct-textarea"></textarea>
           <button type="submit" class="ct-cta">Enviar mensaje →</button>
-          <p class="ct-note">O escríbeme directamente a <a href="mailto:enrique@azlyc.com" style="color:var(--gold2)">enrique@azlyc.com</a></p>
+          <p class="ct-note">O escríbeme directamente a <a href="/cdn-cgi/l/email-protection#adc8c3dfc4dcd8c8edccd7c1d4ce83cec2c0" style="color:var(--gold2)"><span class="__cf_email__" data-cfemail="177279657e66627257766d7b6e743974787a">[email&#160;protected]</span></a></p>
         </form>
         <p class="ct-available">Disponible también para conferencias, colaboración académica y proyectos de advisory.</p>
       </div>
@@ -640,22 +703,4 @@ footer{background:var(--dark);padding:2.5rem 5rem;display:flex;justify-content:s
 <!-- FOOTER -->
 <footer>
   <div class="ft-brand">Enrique Aznar · Gobernanza Ética para la Economía Digital
-    <span class="ft-contact"><a href="mailto:enrique@azlyc.com">enrique@azlyc.com</a> &nbsp;·&nbsp; <a href="https://www.enriqueaznar.com">enriqueaznar.com</a></span>
-  </div>
-  <div class="ft-links">
-    <a href="#servicios">Servicios</a>
-    <a href="#casos">Casos</a>
-    <a href="#ideas">Ideas</a>
-    <a href="#founder">Perfil</a>
-    <a href="en/index.html">EN</a>
-  </div>
-</footer>
-
-<script>
-function toggleCase(header) {
-  const item = header.parentElement;
-  item.classList.toggle('open');
-}
-</script>
-</body>
-</html>
+    <span class="ft-contact"><a href="/cdn-cgi/l/email-protection#d1b4bfa3b8a0a4b491b0abbda8b2ffb2bebc"><span class="__cf_email__" data-cfemail="2e4b405c475f5b4b6e4f5442574d004d4143">[email&#160;protected]</span></a> &nbsp;·&nbsp; <a href="https://www.enriqueaznar.
