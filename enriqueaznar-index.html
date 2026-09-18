@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Enrique Aznar · Gobernanza ética para decisiones complejas en la economía digital</title>
+<meta name="description" content="Enrique Aznar es asesor independiente en gobernanza, compliance y ética empresarial en la economía digital. Especialista en gobernanza de IA y AI Act, tokenización y MiCA, estructuración legal de DAOs, legaltech y regtech. Profesor y conferenciante internacional.">
+
+<link rel="canonical" href="https://enriqueaznar.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://enriqueaznar.com/">
+<meta property="og:title" content="Enrique Aznar · Gobernanza ética para la economía digital">
+<meta property="og:description" content="Asesor independiente en gobernanza, ética empresarial y economía digital. Profesor y conferenciante internacional.">
+<meta property="og:image" content="https://enriqueaznar.com/og-image.jpg">
+<meta property="og:site_name" content="Enrique Aznar">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Idioma alternativo -->
+<link rel="alternate" hreflang="es" href="https://enriqueaznar.com/">
+<link rel="alternate" hreflang="en" href="https://enriqueaznar.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://enriqueaznar.com/">
+
+<!-- Fonts (Google Fonts — production-stable replacement for blob: URLs) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
+
+<!-- Favicon (placeholder — sustituye por tu favicon real) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F4F1E8'/%3E%3Ctext y='70' x='15' font-size='62' font-family='Georgia' fill='%232F4A36'%3EE%3C/text%3E%3C/svg%3E">
+<style>
+/* ═══════════════════════════════════════════════════
+   DESIGN TOKENS — palette swappable via Tweaks
+   ═══════════════════════════════════════════════════ */
+:root {
+  /* DEFAULT — Cream + tobacco */
+  --paper:        #F1ECE2;
+  --paper-2:      #E9E2D4;
+  --paper-3:      #DDD4C2;
+  --ink:          #1A1815;
+  --ink-2:        #3A352D;
+  --muted:        #7A7165;
+  --muted-2:      #9C9285;
+  --rule:         rgba(26,24,21,0.14);
+  --rule-2:       rgba(26,24,21,0.28);
+  --accent:       #A8331A;
+  --accent-soft:  rgba(168,51,26,0.10);
+  --accent-ink:   #6E1F0E;
+}
+[data-palette="bone"] {
+  --paper:        #F7F4EE;
+  --paper-2:      #ECE6DA;
+  --paper-3:      #DCD4C2;
+  --ink:          #14181E;
+  --ink-2:        #2C333D;
+  --muted:        #6C7480;
+  --muted-2:      #9099A4;
+  --rule:         rgba(20,24,30,0.14);
+  --rule-2:       rgba(20,24,30,0.28);
+  --accent:       #1B3A5B;
+  --accent-soft:  rgba(27,58,91,0.10);
+  --accent-ink:   #0E2640;
+}
+[data-palette="ivory"] {
+  --paper:        #F4F1E8;
+  --paper-2:      #E8E3D2;
+  --paper-3:      #D6CFB7;
+  --ink:          #161A14;
+  --ink-2:        #2E3429;
+  --muted:        #6D7466;
+  --muted-2:      #939A8B;
+  --rule:         rgba(22,26,20,0.14);
+  --rule-2:       rgba(22,26,20,0.28);
+  --accent:       #2F4A36;
+  --accent-soft:  rgba(47,74,54,0.10);
+  --accent-ink:   #1E3221;
+}
+
+/* ═══════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════ */
+* { box-sizing: border-box; }
+html, body {
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  margin: 0;
+}
+body {
+  font-family: "Newsreader", Georgia, serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+.sans { font-family: "IBM Plex Sans", system-ui, sans-serif; }
+.mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ═══════════════════════════════════════════════════
+   NAV
+   ═══════════════════════════════════════════════════ */
+header.nav {
+  position: sticky; top: 0; z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in oklab, var(--paper) 90%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+header.nav .brand {
+  font-family: "Newsreader", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+header.nav .brand .dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 10px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+header.nav .links {
+  display: flex;
+  gap: 32px;
+  font-size: 13.5px;
+  color: var(--muted);
+  letter-spacing: -0.005em;
+}
+header.nav .links a {
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+header.nav .links a:hover { color: var(--ink); }
+header.nav .links a::after {
+  content: ""; position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+header.nav .links a:hover::after { transform: scaleX(1); }
+header.nav .right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-self: end;
+}
+header.nav .lang {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+header.nav .lang .active { color: var(--ink); font-weight: 500; }
+header.nav .lang .sep { margin: 0 6px; color: var(--muted-2); }
+header.nav .cta {
+  font-size: 13px;
+  padding: 9px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 2px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+header.nav .cta:hover { background: var(--accent); }
+@media (max-width: 820px) {
+  header.nav { grid-template-columns: 1fr auto; padding: 14px 20px; }
+  header.nav .links { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════════ */
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-head {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 96px;
+  padding-bottom: 0;
+}
+.section-head .num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-weight: 500;
+}
+.section-head .title {
+  font-family: "Newsreader", serif;
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-wrap: balance;
+  margin: 0;
+}
+.section-head .title em {
+  font-style: italic;
+  color: var(--accent);
+}
+@media (max-width: 700px) {
+  section { padding: 0 22px; }
+  .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 32px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO — statement-first, breathes
+   ═══════════════════════════════════════════════════ */
+.hero {
+  padding: 120px 40px 140px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 100px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 78vh;
+}
+.hero .eyebrow {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 56px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.hero .eyebrow::before {
+  content: "";
+  width: 32px; height: 1px;
+  background: var(--accent);
+}
+.hero h1 {
+  font-family: "Newsreader", serif;
+  font-weight: 300;
+  font-size: clamp(42px, 6.4vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin: 0 0 56px;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero .lede {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 460px;
+  text-wrap: pretty;
+  margin: 0 0 64px;
+  letter-spacing: -0.005em;
+}
+.hero .lede em { font-style: italic; color: var(--ink); font-weight: 500; }
+.hero .working {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.hero ul.works {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 56px;
+  /* border-top removed for editorial silence */
+}
+.hero ul.works li {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: baseline;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.hero ul.works li .n {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+.hero ul.works li .tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.hero .cta-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.hero .cta-row .primary {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 14px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero .cta-row .primary:hover { background: var(--accent); transform: translateX(2px); }
+.hero .cta-row .primary .arrow { transition: transform 0.2s; }
+.hero .cta-row .primary:hover .arrow { transform: translateX(3px); }
+.hero .cta-row .secondary {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.hero .cta-row .secondary:hover { color: var(--accent); }
+.hero .credentials {
+  margin-top: 56px;
+  padding-top: 22px;
+  /* border-top removed for editorial silence */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+.hero .credentials .cred-mark {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  padding: 3px 8px;
+  background: var(--accent-soft);
+  border-radius: 2px;
+}
+.hero .credentials .cred-dot { color: var(--muted-2); }
+.hero .cta-row .secondary .dot {
+  display: inline-block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--muted-2);
+  margin: 0 10px 2px;
+  vertical-align: middle;
+}
+
+/* portrait */
+.hero .portrait {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: var(--paper-2);
+  overflow: hidden;
+  border-radius: 2px;
+}
+.hero .portrait img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+.hero .portrait-caption {
+  position: absolute;
+  bottom: -34px; left: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; gap: 56px; padding: 60px 22px 80px; min-height: 0; }
+  .hero .portrait { max-width: 360px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   MARQUEE / AFILIACIONES
+   ═══════════════════════════════════════════════════ */
+.affiliations {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0;
+  margin: 0 auto 120px;
+  max-width: 1280px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.affiliations-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.affiliations-inner .label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.affiliations-inner .item {
+  color: var(--ink-2);
+}
+.affiliations-inner .sep { color: var(--muted-2); }
+@media (max-width: 820px) {
+  .affiliations { margin-left: 22px; margin-right: 22px; margin-bottom: 64px; }
+  .affiliations-inner { gap: 16px; font-size: 12px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   MANIFIESTO
+   ═══════════════════════════════════════════════════ */
+.manifesto {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 120px 40px;
+  margin: 0 0 160px;
+}
+.manifesto-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.manifesto-marker {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.manifesto-stmt {
+  font-family: "Newsreader", serif;
+  font-weight: 300;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 64px;
+  text-wrap: balance;
+  max-width: 920px;
+}
+.manifesto-stmt em { font-style: italic; color: var(--accent); }
+.manifesto-foot {
+  display: flex; gap: 18px; flex-wrap: wrap;
+  padding-top: 28px;
+  /* border-top removed for editorial silence */
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.manifesto-foot .sep { color: var(--muted-2); }
+@media (max-width: 700px) {
+  .manifesto { padding: 64px 22px; margin-bottom: 80px; }
+  .manifesto-foot { gap: 8px; font-size: 10px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   VERTICALES — three strategic pillars, full-width rows
+   ═══════════════════════════════════════════════════ */
+#verticales { margin-bottom: 240px; }
+.vert-list {
+  border-top: 1px solid var(--rule);
+}
+.vert {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.4fr;
+  gap: 64px;
+  padding: 72px 8px 72px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+  position: relative;
+  transition: background 0.3s;
+}
+.vert:hover { background: var(--paper-2); }
+.vert .vert-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-weight: 500;
+  padding-top: 8px;
+}
+.vert .vert-title h3 {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 20px;
+  text-wrap: balance;
+}
+.vert .vert-title h3 em { font-style: italic; color: var(--accent); }
+.vert .vert-title .kicker {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+.vert .vert-quote {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin: 0 0 1.5rem 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 2px solid var(--accent, #a89968);
+  color: var(--ink, #1a1a1a);
+  letter-spacing: -0.005em;
+}
+@media (min-width: 768px) {
+  .vert-quote { font-size: 1.5rem; }
+}
+.vert-body p {
+  font-family: "Newsreader", serif;
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 32px;
+  text-wrap: pretty;
+  max-width: 540px;
+}
+.vert .with {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.vert .with .with-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  margin-right: 6px;
+}
+.vert .with .tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .vert { grid-template-columns: 1fr; gap: 18px; padding: 48px 0; }
+  .vert .vert-num { padding-top: 0; }
+  .vert .vert-quote {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin: 0 0 1.5rem 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 2px solid var(--accent, #a89968);
+  color: var(--ink, #1a1a1a);
+  letter-spacing: -0.005em;
+}
+@media (min-width: 768px) {
+  .vert-quote { font-size: 1.5rem; }
+}
+.vert-body p { font-size: 17px; }
+}
+
+/* Capabilities strip — tangible search-friendly footer to verticales */
+.caps {
+  margin-top: 80px;
+  padding-top: 56px;
+  /* border-top removed for editorial silence */
+}
+.caps-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.caps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+.caps-col-label {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 500;
+}
+.caps-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+.caps-pills span {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  white-space: nowrap;
+  text-transform: lowercase;
+  transition: color 0.2s;
+}
+.caps-pills span:hover {
+  color: var(--accent);
+}
+@media (max-width: 900px) {
+  .caps-grid { grid-template-columns: 1fr; gap: 32px; }
+  .caps { margin-top: 48px; padding-top: 40px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   SERVICIOS (legacy 3-col, no longer used in v2)
+   ═══════════════════════════════════════════════════ */
+#servicios { margin-bottom: 160px; }
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  /* border-top removed for editorial silence */
+}
+.svc {
+  padding: 36px 32px 36px 0;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  position: relative;
+}
+.svc:nth-child(3n) { border-right: none; padding-right: 0; }
+.svc:nth-child(3n+1) { padding-left: 0; }
+.svc:not(:nth-child(3n+1)) { padding-left: 32px; }
+.svc .svc-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.svc h3 {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.svc p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 24px;
+  text-wrap: pretty;
+}
+.svc .tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.svc .tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  text-transform: lowercase;
+}
+@media (max-width: 820px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc { padding: 28px 0 !important; border-right: none; }
+}
+
+/* ═══════════════════════════════════════════════════
+   CASOS
+   ═══════════════════════════════════════════════════ */
+#casos { margin-bottom: 220px; }
+.cases-intro {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  margin: -32px 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cases-intro::before {
+  content: "*";
+  color: var(--accent);
+  font-size: 16px;
+}
+.case-list {
+  border-top: 1px solid var(--rule);
+}
+.case {
+  border-bottom: 1px solid var(--rule);
+  padding: 0;
+  background: var(--paper);
+}
+.case summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 28px 8px;
+  display: grid;
+  grid-template-columns: 80px 1fr auto 32px;
+  gap: 24px;
+  align-items: center;
+  transition: background 0.2s;
+}
+.case summary::-webkit-details-marker { display: none; }
+.case:hover summary { background: var(--paper-2); }
+.case summary .c-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-weight: 500;
+}
+.case summary .c-main { min-width: 0; }
+.case summary .c-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.case summary .c-title {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+.case summary .c-oneline {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.case summary .c-pill {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  padding: 6px 12px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.case summary .c-toggle {
+  font-family: "Newsreader", serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--muted);
+  text-align: center;
+  transition: transform 0.25s, color 0.2s;
+}
+.case[open] summary .c-toggle { transform: rotate(45deg); color: var(--accent); }
+.case .c-detail {
+  padding: 8px 8px 40px 112px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  animation: caseExpand 0.3s ease;
+}
+@keyframes caseExpand {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.case .c-detail .c-block .c-k {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.case .c-detail .c-block .c-v {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.case .c-detail .c-block.c-outcome .c-v {
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (max-width: 820px) {
+  .case summary { grid-template-columns: 44px 1fr 24px; gap: 14px; padding: 22px 0; }
+  .case summary .c-pill { display: none; }
+  .case .c-detail { grid-template-columns: 1fr; padding: 8px 0 32px 58px; gap: 24px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   IDEAS
+   ═══════════════════════════════════════════════════ */
+#ideas { margin-bottom: 220px; }
+.thesis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 56px 0;
+  /* border-top removed for editorial silence */
+  align-items: start;
+}
+.thesis:last-child { border-bottom: 1px solid var(--rule); }
+.thesis .stmt {
+  font-family: "Newsreader", serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+.thesis .stmt .num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.thesis .pieces {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.thesis .pieces li {
+  display: grid;
+  grid-template-columns: 60px 1fr 80px;
+  gap: 16px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.thesis .pieces li:first-child { padding-top: 0; }
+.thesis .pieces li:last-child { border-bottom: none; }
+.thesis .pieces li .year {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.thesis .pieces li .title {
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.thesis .pieces li .title .kind {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.thesis .pieces li .venue {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 920px) {
+  .thesis { grid-template-columns: 1fr; gap: 32px; padding: 40px 0; }
+  .thesis .pieces li { grid-template-columns: 50px 1fr; }
+  .thesis .pieces li .venue { grid-column: 2; text-align: left; }
+}
+
+/* Real-content IDEAS (v5+) — articles / press / video / conferences */
+.ideas-block { margin-bottom: 96px; }
+.ideas-block:last-child { margin-bottom: 0; }
+.ideas-block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 0;
+  margin-bottom: 36px;
+}
+.ideas-block-head .label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+}
+.ideas-block-head .h3 {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+.ideas-block-head .count {
+  font-family: "Newsreader", serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: var(--muted);
+  letter-spacing: -0.02em;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+}
+
+/* Articles — 3-col cards */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.art-card {
+  background: var(--paper);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background 0.25s;
+  color: inherit;
+  text-decoration: none;
+  min-height: 200px;
+}
+.art-card:hover { background: var(--paper-2); }
+.art-card .a-venue {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.art-card .a-title {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+  flex: 1;
+}
+.art-card .a-desc {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+.art-card .a-arrow {
+  font-family: "Newsreader", serif;
+  font-size: 18px;
+  color: var(--accent);
+  align-self: flex-end;
+  margin-top: 8px;
+  transition: transform 0.25s;
+}
+.art-card:hover .a-arrow { transform: translateX(4px); }
+.art-card.dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+.art-card.dark .a-title { color: var(--paper); }
+.art-card.dark .a-venue { color: rgba(255,255,255,0.55); }
+.art-card.dark .a-desc { color: rgba(255,255,255,0.7); }
+.art-card.dark .a-arrow { color: color-mix(in oklab, var(--accent) 75%, var(--paper) 25%); }
+.art-card.dark:hover { background: var(--accent-ink); }
+
+/* Prensa — tighter 4-col */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.press-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 18px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--paper);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.press-card:hover { background: var(--paper-2); border-color: var(--rule-2); }
+.press-card .p-src {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.press-card .p-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+/* Videos — same grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 18px;
+  background: var(--paper-2);
+  border-radius: 2px;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.2s;
+  min-height: 110px;
+}
+.video-card:hover { background: var(--paper-3); }
+.video-card .v-src {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.video-card .v-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink);
+  flex: 1;
+  text-wrap: pretty;
+}
+.video-card .v-dur {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Conferences accordion */
+.conf {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+.conf summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conf summary::-webkit-details-marker { display: none; }
+.conf summary::after {
+  content: "+";
+  font-family: "Newsreader", serif;
+  font-size: 22px;
+  color: var(--accent);
+  font-weight: 300;
+  transition: transform 0.25s;
+}
+.conf[open] summary::after { transform: rotate(45deg); }
+.conf ul {
+  list-style: none;
+  padding: 4px 24px 24px;
+  margin: 0;
+  /* border-top removed for editorial silence */
+  display: grid;
+  gap: 0;
+}
+.conf ul li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 16px;
+  align-items: baseline;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.conf ul li:last-child { border-bottom: none; }
+.conf ul li .cv-venue {
+  color: var(--ink);
+  font-weight: 500;
+}
+.conf ul li .cv-year {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  text-align: right;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 920px) {
+  .art-grid { grid-template-columns: 1fr; }
+  .press-grid, .video-grid { grid-template-columns: repeat(2, 1fr); }
+  .ideas-block-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media (max-width: 540px) {
+  .press-grid, .video-grid { grid-template-columns: 1fr; }
+  .conf ul li { grid-template-columns: 1fr; gap: 4px; }
+  .conf ul li .cv-year { text-align: left; }
+}
+
+/* ═══════════════════════════════════════════════════
+   PERFIL
+   ═══════════════════════════════════════════════════ */
+#perfil { margin-bottom: 160px; }
+.profile {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.profile .bio p {
+  font-family: "Newsreader", serif;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.profile .bio p:first-child::first-letter {
+  font-family: "Newsreader", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  float: left;
+  margin: 4px 12px 0 0;
+  color: var(--accent);
+}
+.profile .bio a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+}
+.profile .bio a:hover { color: var(--accent); }
+.profile .bio strong { font-weight: 500; color: var(--ink); }
+.positions {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.positions .label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.positions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  /* border-top removed for editorial silence */
+}
+.positions ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: baseline;
+  font-size: 14px;
+}
+.positions ul li .role { color: var(--ink); font-weight: 500; }
+.positions ul li .org {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+@media (max-width: 920px) {
+  .profile { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   CONTACTO
+   ═══════════════════════════════════════════════════ */
+#contacto {
+  margin: 0 auto 80px;
+  padding: 0 40px;
+}
+.contact-card {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 80px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  align-items: end;
+  position: relative;
+  overflow: hidden;
+}
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: -50%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+  opacity: 0.18;
+  pointer-events: none;
+}
+.contact-card .head {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+}
+.contact-card h2 {
+  font-family: "Newsreader", serif;
+  font-weight: 300;
+  font-size: clamp(34px, 4.5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
+  color: var(--paper);
+  text-wrap: balance;
+}
+.contact-card h2 em { color: color-mix(in oklab, var(--accent) 75%, var(--paper) 25%); font-style: italic; }
+.contact-card p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  color: rgba(255,255,255,0.78);
+  margin: 0 0 40px;
+  max-width: 480px;
+  text-wrap: pretty;
+}
+.contact-card .cta {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 16px 26px;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+.contact-card .cta:hover { background: var(--accent); color: var(--paper); }
+.contact-card .lines {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.contact-card .lines .line {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  font-size: 14px;
+}
+.contact-card .lines .line:first-child { border-top: 1px solid rgba(255,255,255,0.12); }
+.contact-card .lines .line .k {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.contact-card .lines .line .v { color: var(--paper); }
+.contact-card .lines .line .v a { border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 1px; transition: border-color 0.2s; }
+.contact-card .lines .line .v a:hover { border-color: var(--accent); }
+@media (max-width: 920px) {
+  .contact-card { grid-template-columns: 1fr; padding: 56px 32px; gap: 40px; }
+  #contacto { padding: 0 22px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════ */
+footer.foot {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  margin-top: 60px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+footer.foot .meta { font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; }
+footer.foot a:hover { color: var(--accent); }
+@media (max-width: 700px) { footer.foot { padding: 32px 22px; } }
+
+
+/* helpers */
+.spacer-lg { height: 80px; }
+.spacer-xl { height: 140px; }
+</style>
+</head>
+<body data-palette="ivory">
+
+<!-- ═══════════════════════════════════════════════════
+     NAV
+     ═══════════════════════════════════════════════════ -->
+<header class="nav">
+  <a class="brand" href="#top"><span class="dot"></span>Enrique Aznar</a>
+  <nav class="links">
+    <a href="#verticales">El trabajo</a>
+    <a href="#casos">Casos</a>
+    <a href="#ideas">Ideas</a>
+    <a href="#perfil">Perfil</a>
+  </nav>
+  <div class="right">
+    <div class="lang"><span class="active">ES</span><span class="sep">/</span><a href="/en/" style="color:inherit;text-decoration:none">EN</a></div>
+    <a class="cta" href="#contacto">Hablemos</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════ -->
+<div id="top" class="hero">
+  <div>
+    <div class="eyebrow">Enrique Aznar</div>
+    <h1 id="headline">Gobernanza ética para <em>decisiones complejas.</em></h1>
+    <p class="lede">
+      Asesoro a organizaciones bajo presión regulatoria, tecnológica
+      y reputacional —
+      <em>cuando cumplir no es el problema sino decidir qué significa cumplir.</em>
+    </p>
+
+    <div class="working">Trabajo con organizaciones que enfrentan</div>
+    <ul class="works">
+      <li><span class="n">01</span><span>Decisiones regulatorias ambiguas.</span><span class="tag">consejo · riesgo</span></li>
+      <li><span class="n">02</span><span>IA, tokenización o activos digitales sin marcos claros.</span><span class="tag">AI Act · MiCA</span></li>
+      <li><span class="n">03</span><span>Presión reputacional, ESG o institucional.</span><span class="tag">legitimidad</span></li>
+      <li><span class="n">04</span><span>Crecimiento más rápido que su gobernanza.</span><span class="tag">cultura · control</span></li>
+    </ul>
+
+    <div class="cta-row">
+      <a class="primary" href="#contacto">Iniciar una conversación <span class="arrow">→</span></a>
+    </div>
+
+    <div class="credentials">
+      <span class="cred-mark">Ahora</span>
+      <span>Profesor · IE&nbsp;University</span>
+      <span class="cred-dot">·</span>
+      <span>Director Académico · IE-Elecnor Knowledge Hub on Ethical Business</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="portrait">
+      <img src="enrique-aznar.jpg" alt="Enrique Aznar" loading="eager" decoding="async">
+      <div class="portrait-caption">— Madrid · 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     EL TRABAJO — verticales
+     ═══════════════════════════════════════════════════ -->
+<section id="verticales">
+  <div class="section-head">
+    <div class="num">§ 01 — EL TRABAJO</div>
+    <h2 class="title">Tres planos de intervención, una misma <em>capa de decisión</em>.</h2>
+  </div>
+
+  <div class="vert-list">
+    <article class="vert">
+      <div class="vert-num">01</div>
+      <div class="vert-title">
+        <div class="kicker">Gobernanza estratégica</div>
+        <h3>Gobernanza y <em>Consejos</em></h3>
+      </div>
+      <div class="vert-body">
+        <p>
+          Estructura de decisión, consejo, supervisión y
+          <em>accountability</em> en entornos regulatorios complejos.
+          Diseño la capa donde se toman las decisiones difíciles —
+          y termina cuando el consejo no me necesita para volverlas
+          a tomar.
+        </p>
+        <div class="with">
+          <span class="with-label">Mandatos típicos</span>
+          <span class="tag">estructuración de consejos</span>
+          <span class="tag">comités de riesgo</span>
+          <span class="tag">independencia</span>
+          <span class="tag">sucesión</span>
+          <span class="tag">supervisión</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="vert">
+      <div class="vert-num">02</div>
+      <div class="vert-title">
+        <div class="kicker">Integridad operacional</div>
+        <h3>Compliance, Cultura y <em>Sistemas Éticos</em></h3>
+      </div>
+      <div class="vert-body">
+        <blockquote class="vert-quote">
+          No hay programa de compliance eficiente sin una cultura
+          corporativa que lo sostenga.
+        </blockquote>
+        <p>
+          Modelos de compliance, investigaciones internas, cultura
+          organizacional y marcos ESG operacionales — no aspiracionales.
+          La legitimidad institucional empieza en la matriz de decisión
+          del consejo, no en los reportes.
+        </p>
+        <div class="with">
+          <span class="with-label">Mandatos típicos</span>
+          <span class="tag">programas de compliance</span>
+          <span class="tag">investigaciones internas</span>
+          <span class="tag">código de conducta</span>
+          <span class="tag">debida diligencia</span>
+          <span class="tag">ESG operacional</span>
+          <span class="tag">transformación cultural</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="vert">
+      <div class="vert-num">03</div>
+      <div class="vert-title">
+        <div class="kicker">Tecnología de frontera</div>
+        <h3>Inteligencia Artificial y <em>Activos Digitales</em></h3>
+      </div>
+      <div class="vert-body">
+        <p>
+          Aplicabilidad del AI&nbsp;Act y clasificación de roles,
+          transparencia del artículo&nbsp;50, preparación para sistemas
+          de alto riesgo y gobierno de la IA desde el consejo.
+          Tokenización, estructuración legal de DAOs y navegación de
+          sandboxes regulatorios. Donde el AI&nbsp;Act, MiCA y el
+          DLT&nbsp;Pilot todavía se están escribiendo — y donde cada
+          decisión de hoy define el marco regulatorio de mañana.
+        </p>
+        <div class="with">
+          <span class="with-label">Mandatos típicos</span>
+          <span class="tag">AI Act</span>
+          <span class="tag">gobernanza de IA</span>
+          <span class="tag">políticas de IA generativa</span>
+          <span class="tag">ISO/IEC 42001</span>
+          <span class="tag">MiCA</span>
+          <span class="tag">DLT Pilot</span>
+          <span class="tag">tokenización</span>
+          <span class="tag">estructuración de DAOs</span>
+          <span class="tag">sandbox</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Capabilities strip — tangible search-friendly footer -->
+  <div class="caps">
+    <div class="caps-label">Capacidades</div>
+    <div class="caps-grid">
+      <div class="caps-col">
+        <div class="caps-col-label">Gobernanza</div>
+        <div class="caps-pills">
+          <span>estructuración de consejos</span>
+          <span>comités</span>
+          <span>independencia</span>
+          <span>supervisión</span>
+          <span>matriz de decisión</span>
+          <span>accountability</span>
+          <span>sucesión</span>
+        </div>
+      </div>
+      <div class="caps-col">
+        <div class="caps-col-label">Compliance y Ética</div>
+        <div class="caps-pills">
+          <span>programas de compliance</span>
+          <span>investigaciones internas</span>
+          <span>código de conducta</span>
+          <span>debida diligencia</span>
+          <span>transformación cultural</span>
+          <span>ESG operacional</span>
+          <span>legitimidad institucional</span>
+        </div>
+      </div>
+      <div class="caps-col">
+        <div class="caps-col-label">IA y Activos Digitales</div>
+        <div class="caps-pills">
+          <span>AI Act</span>
+          <span>gobernanza de IA</span>
+          <span>artículo 50</span>
+          <span>alto riesgo</span>
+          <span>ISO/IEC 42001</span>
+          <span>MiCA</span>
+          <span>CASP</span>
+          <span>DLT Pilot</span>
+          <span>tokenización</span>
+          <span>estructuración de DAOs</span>
+          <span>sandbox</span>
+          <span>legaltech</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CASOS
+     ═══════════════════════════════════════════════════ -->
+<section id="casos">
+  <div class="section-head">
+    <div class="num">§ 02 — CASOS</div>
+    <h2 class="title">Tres décadas en la frontera de las crisis de gobernanza, la <em>innovación regulatoria</em> y la transformación organizacional.</h2>
+  </div>
+  <div class="cases-intro">Selección de mandatos representativos. Detalles cliente-identificables modificados.</div>
+
+  <div class="case-list">
+    <details class="case">
+      <summary>
+        <div class="c-num">01</div>
+        <div class="c-main">
+          <div class="c-tag">Telecomunicaciones · EMEA</div>
+          <h3 class="c-title">Crisis de corrupción en una multinacional NASDAQ</h3>
+          <div class="c-oneline">Investigación DOJ · 10+ jurisdicciones · Management Board</div>
+        </div>
+        <div class="c-pill">Programa global reestructurado</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">Situación</div><div class="c-v">Grupo de telecomunicaciones de $13.5bn enfrentando una crisis grave de soborno y corrupción en múltiples jurisdicciones bajo investigación DOJ.</div></div>
+        <div class="c-block"><div class="c-k">Trabajo realizado</div><div class="c-v">Miembro del Management Board y Chief Compliance Officer. Diseño e implementación de la arquitectura de compliance post-crisis, gestionando la tensión entre enforcement americano y realidades operativas europeas. Participación en el proceso de selección del monitor independiente requerido por la resolución DOJ.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Resultado</div><div class="c-v">Programa global de compliance reestructurado en más de 10 jurisdicciones, sentando las bases del trabajo posterior con el monitor independiente — concluido tras mi salida de la organización.</div></div>
+      </div>
+    </details>
+
+    <details class="case">
+      <summary>
+        <div class="c-num">02</div>
+        <div class="c-main">
+          <div class="c-tag">Fintech · España · CNMV</div>
+          <h3 class="c-title">Primera tokenización de deuda en el Sandbox de la CNMV</h3>
+          <div class="c-oneline">RWA tokenisation · DLT Pilot · Primera cohorte</div>
+        </div>
+        <div class="c-pill">Aprobación primera cohorte</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">Situación</div><div class="c-v">Vacío regulatorio en España para tokenización de activos reales. Necesidad de estructura legal bajo Régimen Piloto DLT y legislación española de mercados de valores.</div></div>
+        <div class="c-block"><div class="c-k">Trabajo realizado</div><div class="c-v">Co-fundador y responsable del diseño legal y regulatorio. Estructura legal completa, documentación de inversores y marco de interacción regulatoria con la CNMV.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Resultado</div><div class="c-v">Aprobación en primera cohorte del Sandbox Fintech CNMV. Precedente regulatorio en España.</div></div>
+      </div>
+    </details>
+
+    <details class="case">
+      <summary>
+        <div class="c-num">03</div>
+        <div class="c-main">
+          <div class="c-tag">Tecnología · Operaciones globales</div>
+          <h3 class="c-title">Transformación cultural en un grupo tecnológico en crisis</h3>
+          <div class="c-oneline">Gobernanza distribuida · 3 regiones · Valores corporativos</div>
+        </div>
+        <div class="c-pill">3 regiones · Reporte al Consejo</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">Situación</div><div class="c-v">Gran empresa tecnológica operando en mercados volátiles con modelos de control convencionales que no reflejaban la realidad organizacional.</div></div>
+        <div class="c-block"><div class="c-k">Trabajo realizado</div><div class="c-v">Programa de transformación cultural basado en valores. Sustitución de jerarquías convencionales por modelos de gobernanza distribuida. Rediseño de cómo la organización tomaba decisiones, asignaba responsabilidad y medía la integridad.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Resultado</div><div class="c-v">Adopción en tres regiones operativas. Integrado en el reporte al consejo y métricas de desempeño.</div></div>
+      </div>
+    </details>
+
+    <details class="case">
+      <summary>
+        <div class="c-num">04</div>
+        <div class="c-main">
+          <div class="c-tag">Marketing Digital · Compliance · España</div>
+          <h3 class="c-title">Cuando una startup digital crece sin controles: lecciones del sector de afiliación</h3>
+          <div class="c-oneline">Ecosistema de afiliados · Cadena de valor · Riesgo reputacional · ESG</div>
+        </div>
+        <div class="c-pill">Caso de referencia</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">El patrón</div><div class="c-v">Empresas digitales de marketing y afiliación que crecen rápidamente sin estructura de gobernanza, sin control sobre su ecosistema de afiliados y sin medición de su impacto. El caso más visible en España (Operación Rikati, 2017) demostró cómo la ausencia de controles en un modelo de afiliación puede escalar hasta una crisis penal con millones de afectados.</div></div>
+        <div class="c-block"><div class="c-k">Aplicación práctica</div><div class="c-v">Este patrón lo utilizo en formación ejecutiva (IE Law School) y en advisory con empresas del sector digital. Diseño marcos de gobernanza ESG, debida diligencia sobre cadena de valor de afiliados, medición de huella de carbono digital y preparación para CSRD/CS3D — adaptados al modelo de negocio específico de cada empresa.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Por qué importa hoy</div><div class="c-v">Con el RD 214/2025, la CSRD y la CS3D, las empresas digitales ya no pueden operar sin estructura de sostenibilidad y control de su ecosistema.</div></div>
+      </div>
+    </details>
+
+    <details class="case">
+      <summary>
+        <div class="c-num">05</div>
+        <div class="c-main">
+          <div class="c-tag">Farmacéutica · Sostenibilidad · Italia</div>
+          <h3 class="c-title">Plan estratégico de sostenibilidad para un líder europeo en genéricos</h3>
+          <div class="c-oneline">€200M+ facturación · 200+ empleados · 13 áreas terapéuticas · Private equity</div>
+        </div>
+        <div class="c-pill">Plan aprobado por el Board</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">Situación</div><div class="c-v">Compañía farmacéutica líder en genéricos en un mercado europeo clave, con más de €200M de facturación, +200 empleados y presencia en 13 áreas terapéuticas. Modelo asset-light con red comercial distribuida. Propiedad de un fondo de private equity internacional. Sin estrategia de sostenibilidad formal ni reportes ESG.</div></div>
+        <div class="c-block"><div class="c-k">Trabajo realizado</div><div class="c-v">Diseño del plan estratégico de sostenibilidad completo: diagnóstico de materialidad, definición de pilares ESG, gobernanza de sostenibilidad, KPIs y hoja de ruta. Integración de la cadena de suministro farmacéutica en el análisis de impacto. Presentación y aprobación por el consejo de administración.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Resultado</div><div class="c-v">Primer plan estratégico de sostenibilidad aprobado por el Board. Marco de reportes alineado con estándares europeos. Posicionamiento como referente ESG en genéricos.</div></div>
+      </div>
+    </details>
+
+    <details class="case">
+      <summary>
+        <div class="c-num">06</div>
+        <div class="c-main">
+          <div class="c-tag">Educación Superior · Transformación Cultural · Centroamérica</div>
+          <h3 class="c-title">Transformación cultural y gobernanza ética en una universidad de referencia</h3>
+          <div class="c-oneline">6.000+ estudiantes · Definición de ethos · Estructura de gobernanza · Compliance</div>
+        </div>
+        <div class="c-pill">Ethos y gobernanza implantados</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">Situación</div><div class="c-v">Universidad privada de referencia en Centroamérica, con más de 6.000 estudiantes y programas acreditados internacionalmente. La institución necesitaba formalizar su marco ético, definir su ethos y construir una estructura de gobernanza y compliance adaptada al entorno académico — donde la cultura de control corporativa estándar no encaja.</div></div>
+        <div class="c-block"><div class="c-k">Trabajo realizado</div><div class="c-v">Definición participativa del ethos institucional con órganos de gobierno, claustro y comunidad universitaria. Diseño de la estructura de gobernanza ética: comité de ética, canales de denuncia, políticas de integridad académica. Programa de formación para líderes académicos.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Resultado</div><div class="c-v">Marco ético institucional aprobado por la Junta Directiva. Estructura de gobernanza ética operativa. Programa de compliance construido desde la identidad de la institución, no importado del mundo corporativo.</div></div>
+      </div>
+    </details>
+
+    <details class="case">
+      <summary>
+        <div class="c-num">07</div>
+        <div class="c-main">
+          <div class="c-tag">Colegio Profesional · Compliance · España</div>
+          <h3 class="c-title">Programa de compliance para un colegio profesional de referencia</h3>
+          <div class="c-oneline">Sector regulado · Diseño integral del programa · Formación a órganos de gobierno</div>
+        </div>
+        <div class="c-pill">Programa implantado y operativo</div>
+        <div class="c-toggle">+</div>
+      </summary>
+      <div class="c-detail">
+        <div class="c-block"><div class="c-k">Situación</div><div class="c-v">Colegio profesional con miles de colegiados, obligaciones regulatorias específicas y una exposición creciente a riesgos penales corporativos tras la reforma del Código Penal. La institución carecía de un programa de compliance estructurado y necesitaba uno que respetara la naturaleza colegial de su gobierno.</div></div>
+        <div class="c-block"><div class="c-k">Trabajo realizado</div><div class="c-v">Diagnóstico de riesgos penales y regulatorios específicos del sector colegial. Diseño e implantación del programa completo: código ético, mapa de riesgos, canal de denuncias, protocolos de decisión y sistema disciplinario. Programa de formación para la Junta de Gobierno.</div></div>
+        <div class="c-block c-outcome"><div class="c-k">Resultado</div><div class="c-v">Programa de compliance aprobado e implantado. Órgano de cumplimiento constituido. Modelo replicable para otras instituciones colegiales del sector.</div></div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     IDEAS — artículos, prensa, vídeos, conferencias
+     ═══════════════════════════════════════════════════ -->
+<section id="ideas">
+  <div class="section-head">
+    <div class="num">§ 03 — IDEAS</div>
+    <h2 class="title">Pensamiento estructurado <em>sobre gobernanza ética</em>.</h2>
+  </div>
+
+  <!-- Artículos editoriales -->
+  <div class="ideas-block">
+    <div class="ideas-block-head">
+      <div>
+        <div class="label">Artículos &amp; capítulos</div>
+        <h3 class="h3">Publicaciones editoriales</h3>
+      </div>
+      <div class="count">03</div>
+    </div>
+    <div class="art-grid">
+      <a class="art-card" href="pdf/cultura-corporativa-compliance-2020.pdf" target="_blank" rel="noopener">
+        <div class="a-venue">Wolters Kluwer · 2020</div>
+        <h4 class="a-title">La importancia de la cultura corporativa en la prevención de riesgos de compliance</h4>
+        <p class="a-desc">En <em>Mapa de riesgos penales y prevención del delito en la empresa</em> (coords. Pere Simón Castellano y Alfredo Abadías Selma).</p>
+        <span class="a-arrow">→</span>
+      </a>
+      <a class="art-card" href="pdf/cultura-etica-organizaciones-ES.pdf" target="_blank" rel="noopener">
+        <div class="a-venue">Thomson Reuters Aranzadi · 2018</div>
+        <h4 class="a-title">¿Cómo y para qué crear una cultura ética en las organizaciones?</h4>
+        <p class="a-desc">En <em>Actualidad Compliance 2018</em> (dir. Juan Antonio Frago Amada), pp. 61-75.</p>
+        <span class="a-arrow">→</span>
+      </a>
+      <a class="art-card dark" href="https://www.ie.edu/ie-elecnor-hub-on-ethical-business/" target="_blank" rel="noopener">
+        <div class="a-venue">IE-Elecnor Knowledge Hub</div>
+        <h4 class="a-title">Director Académico — más artículos y recursos</h4>
+        <p class="a-desc">Investigación, debates y contenidos sobre ética corporativa e innovación responsable.</p>
+        <span class="a-arrow">→ Ver todos</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Prensa -->
+  <div class="ideas-block">
+    <div class="ideas-block-head">
+      <div>
+        <div class="label">En los medios</div>
+        <h3 class="h3">Prensa y entrevistas</h3>
+      </div>
+      <div class="count">10</div>
+    </div>
+    <div class="press-grid">
+      <a class="press-card" href="https://www.ie.edu/es/law-school/historias-profesores/enrique/" target="_blank" rel="noopener">
+        <div class="p-src">IE Law School</div>
+        <div class="p-title">La profesión de compliance cuando se logra modificar comportamientos</div>
+      </a>
+      <a class="press-card" href="https://www.iese.edu/es/insight/articulos/cumplimiento-normativo-integridad-empresa/" target="_blank" rel="noopener">
+        <div class="p-src">IESE Insight</div>
+        <div class="p-title">Del director de cumplimiento normativo al de integridad</div>
+      </a>
+      <a class="press-card" href="https://www.ie.edu/lifelong-learning/news-events/news/enrique-aznar-professor-executive-legal-compliance-program-tells-us-vision-regarding-new-challenges-sector-covid-19-future-compliance/" target="_blank" rel="noopener">
+        <div class="p-src">IE Law School</div>
+        <div class="p-title">"El compliance debe servir a las empresas para introducir controles…"</div>
+      </a>
+      <a class="press-card" href="https://www.abc.es/contentfactory/post/2024/01/08/desafiando-la-corrupcion-el-poder-de-la-cultura-etica-y-la-gobernanza-en-el-mundo-corporativo/" target="_blank" rel="noopener">
+        <div class="p-src">ABC Content Factory</div>
+        <div class="p-title">Desafiando la corrupción: el poder de la cultura ética y la gobernanza</div>
+      </a>
+      <a class="press-card" href="https://www.iese.edu/es/insight/articulos/fomentar-denuncia-irregularidades-empresa/" target="_blank" rel="noopener">
+        <div class="p-src">IESE Insight</div>
+        <div class="p-title">Cómo fomentar la denuncia de irregularidades en la empresa</div>
+      </a>
+      <a class="press-card" href="https://www.ie.edu/ie-elecnor-hub-on-ethical-business/actualidad/entrevista-con-enrique-aznar-es-mas-interesante-plantearse-la-creacion-de-culturas-corporativas-basadas-en-valores-que-en-el-miedo-por-las-consecuencias-del-incumplimiento/" target="_blank" rel="noopener">
+        <div class="p-src">IE-Elecnor Hub</div>
+        <div class="p-title">Entrevista — culturas corporativas basadas en valores, no en miedo al incumplimiento</div>
+      </a>
+      <a class="press-card" href="https://www.baeslegalcripto.eu/legalcripto/desafios-legales-y-estructuras-de-las-daos/" target="_blank" rel="noopener">
+        <div class="p-src">LegalCripto</div>
+        <div class="p-title">Desafíos legales y estructuras de las DAOs</div>
+      </a>
+      <a class="press-card" href="https://inkietos.org/publicaciones/encuentro-con-enrique-aznar/" target="_blank" rel="noopener">
+        <div class="p-src">Inkietos</div>
+        <div class="p-title">Encuentro con Enrique Aznar — Ethics, Governance, Risk &amp; Compliance</div>
+      </a>
+      <a class="press-card" href="https://www.unir.net/actualidad/internacional/como-crear-una-cultura-etica-en-tu-empresa/" target="_blank" rel="noopener">
+        <div class="p-src">UNIR</div>
+        <div class="p-title">Cómo crear una cultura ética en tu empresa</div>
+      </a>
+      <a class="press-card" href="https://asociacioncompliance.com/recomendaciones-a-la-alta-direccion-sobre-compliance/" target="_blank" rel="noopener">
+        <div class="p-src">ASCOM</div>
+        <div class="p-title">Recomendaciones a la alta dirección sobre implementación de compliance</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Vídeos -->
+  <div class="ideas-block">
+    <div class="ideas-block-head">
+      <div>
+        <div class="label">Vídeos &amp; podcast</div>
+        <h3 class="h3">Charlas, entrevistas y podcasts</h3>
+      </div>
+      <div class="count">13</div>
+    </div>
+    <div class="video-grid">
+      <a class="video-card" href="https://youtu.be/oo5YXMsbaYQ" target="_blank" rel="noopener">
+        <div class="v-src">YouTube</div>
+        <div class="v-title">Activos digitales: tokenización y gobernanza</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/sc6bJ43toBM" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · GA_P</div>
+        <div class="v-title">GA_P Talks — Presente y futuro de los criptoactivos</div>
+        <div class="v-dur">1:28:23</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/XqcjZVQ0hrs" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · IE-Elecnor</div>
+        <div class="v-title">Artificial Intelligence in Business — Opportunities and Ethical Challenges</div>
+        <div class="v-dur">1:09:09</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/ZpYyvPDcLyw" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · IAE / Toral</div>
+        <div class="v-title">La responsabilidad penal del Compliance Officer</div>
+        <div class="v-dur">1:24:56</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/Pp8Bn7ReqTU" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · IE Law School</div>
+        <div class="v-title">Compliance Officer — importancia del compliance en los negocios</div>
+        <div class="v-dur">44:21</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/7FtNpdjySoQ" target="_blank" rel="noopener">
+        <div class="v-src">YouTube</div>
+        <div class="v-title">Riesgos y amenazas de la corrupción para la abogacía</div>
+        <div class="v-dur">17:35</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/VnKFrKLqmUM" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · Modo Cripto</div>
+        <div class="v-title">El Oráculo de Modo Cripto #8 — La economía de los tokens en la Web3</div>
+        <div class="v-dur">4:35:11</div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/watch?v=RwzAGuFJCdM" target="_blank" rel="noopener">
+        <div class="v-src">YouTube</div>
+        <div class="v-title">Compliance en tiempos de incertidumbre</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/gxULGK6pJ6s" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · Fundación Elecnor</div>
+        <div class="v-title">Podcast Fundación Elecnor — Observatorio IE</div>
+        <div class="v-dur">1:41:23</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/rzP5FzaFwzk" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · Casa de América</div>
+        <div class="v-title">Cumplimiento y sostenibilidad — lecciones desde América Latina</div>
+        <div class="v-dur">31:32</div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/watch?v=MMlBbUK5aro" target="_blank" rel="noopener">
+        <div class="v-src">YouTube · ICAM</div>
+        <div class="v-title">Compliance ICAM — ética corporativa y canales de denuncia</div>
+      </a>
+      <a class="video-card" href="https://youtu.be/HycMt0vQqI0" target="_blank" rel="noopener">
+        <div class="v-src">YouTube</div>
+        <div class="v-title">Global Summit — Real World Assets &amp; Blockchain Integration</div>
+      </a>
+      <a class="video-card" href="https://open.spotify.com/episode/7mUkj9u6Cz39AVZw0Ewhsn" target="_blank" rel="noopener">
+        <div class="v-src">Spotify · Off the Block</div>
+        <div class="v-title">RealFund — tokenizando en un sector tradicional como el inmobiliario</div>
+        <div class="v-dur">Podcast</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Conferencias internacionales -->
+  <div class="ideas-block">
+    <details class="conf">
+      <summary>
+        <span><span class="label" style="margin-right:14px">Ponencias</span>Conferencias internacionales seleccionadas</span>
+      </summary>
+      <ul>
+        <li><span><span class="cv-venue">OCDE &amp; Contraloría General de Brasil</span> — "Corruption and Business: What Price do Companies Pay?" Conferencia Latinoamericana sobre Responsabilidad Corporativa. São Paulo.</span><span class="cv-year">2010</span></li>
+        <li><span><span class="cv-venue">International Bar Association</span> — Anti-Corruption Conference. Praga.</span><span class="cv-year">2009</span></li>
+        <li><span><span class="cv-venue">International Bar Association</span> — "Doing the Right Thing". 10th Annual Group Members' Leadership Summit. Londres.</span><span class="cv-year">2014</span></li>
+        <li><span><span class="cv-venue">IBA &amp; OCDE &amp; UNODC</span> — "Anti-Corruption Strategy for the Legal Profession". Madrid y Barcelona.</span><span class="cv-year">2013</span></li>
+        <li><span><span class="cv-venue">UNICEF, Save the Children &amp; UN Global Compact</span> — World Child &amp; Youth Forum. Palacio Real, Estocolmo. Panelista sobre Derechos de la Infancia y Principios Empresariales.</span><span class="cv-year">2013</span></li>
+        <li><span><span class="cv-venue">Università Bocconi</span> — "Ethics, Compliance and Corporate Responsibility in the Corporate World". Milán.</span><span class="cv-year">2010</span></li>
+        <li><span><span class="cv-venue">ACC Europe</span> — 20th Annual Conference. "Legal and Compliance: Two Worlds or Only Two Faces of the Same Coin?" Barcelona.</span><span class="cv-year">2013</span></li>
+        <li><span><span class="cv-venue">The Global Compliance Officers' Forum</span> — "Building a Stronger Ethical Culture". Luncheon Keynote. Fráncfort.</span><span class="cv-year">2016</span></li>
+        <li><span><span class="cv-venue">Financial Times</span> — Anti-Corruption Conference. "Whistleblower Hotlines". Düsseldorf.</span><span class="cv-year">2009</span></li>
+        <li><span><span class="cv-venue">IAE–IESE Business School</span> — "Compliance para la Alta Dirección: lo que realmente importa". Buenos Aires.</span><span class="cv-year">2013–15</span></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PERFIL
+     ═══════════════════════════════════════════════════ -->
+<section id="perfil">
+  <div class="section-head">
+    <div class="num">§ 04 — PERFIL</div>
+    <h2 class="title">Abogado · Asesor de gobernanza · <em>Profesor · Conferenciante</em>.</h2>
+  </div>
+
+  <div class="profile">
+    <div class="bio">
+      <p>
+        <strong>Casi tres décadas</strong> en posiciones ejecutivas sénior
+        en multinacionales tecnológicas y de telecomunicaciones —
+        desde Arthur Andersen y Price Waterhouse hasta Freshfields,
+        Dell, Tyco International, Nokia Siemens Networks, Millicom y
+        el Management Board de <strong>VimpelCom/VEON</strong>
+        (NASDAQ, $13.5bn), hasta 2017.
+      </p>
+      <p>
+        Abogado <strong>colegiado en España e Inglaterra y Gales</strong>.
+        Profesor en IE Law School e IE Business School. Director
+        Académico del <strong>IE-Elecnor Knowledge Hub on Ethical
+        Business</strong>. Formación avanzada en Oxford&nbsp;Saïd,
+        IESE, IE y Stanford. Certificado en Generative AI for Business
+        Professionals (IE&nbsp;University, 2024).
+      </p>
+      <p>
+        Co-fundador de <a href="https://realfund.tech/" target="_blank" rel="noopener"><strong>RealFund</strong></a>, primera plataforma
+        española de tokenización de activos reales aprobada en el
+        Sandbox Fintech de la CNMV. Co-Chair del UK&nbsp;&amp;&nbsp;European
+        Digital Asset Task Force de la
+        <a href="https://dara.foundation/dara-strategic-advisors/" target="_blank" rel="noopener"><strong>Digital Asset Regulatory Authority (DARA)</strong></a>
+        y Director Regional para Europa de la
+        Government&nbsp;Blockchain&nbsp;Association. Asesor
+        activo en proyectos de tokenización e IA en España, Europa y
+        Oriente&nbsp;Medio. Partner y consultor de
+        <a href="https://voombu.app/" target="_blank" rel="noopener"><strong>Voombu</strong></a>,
+        plataforma ESG modular para reportes ESRS, gestión de
+        riesgos y financiación sostenible. La práctica legal y de
+        compliance opera a través de
+        <a href="https://aznar.legal" target="_blank" rel="noopener"><strong>Aznar Legal &amp; Compliance</strong></a>.
+      </p>
+    </div>
+
+    <div class="positions">
+      <div class="label">Posiciones actuales</div>
+      <ul>
+        <li><span class="role">Profesor</span><span class="org">IE&nbsp;University</span></li>
+        <li><span class="role">Director Académico</span><span class="org">IE-Elecnor Knowledge Hub</span></li>
+        <li><span class="role">Co-fundador</span><span class="org">RealFund</span></li>
+        <li><span class="role">Socio fundador</span><span class="org"><a href="https://aznar.legal" target="_blank" rel="noopener">Aznar Legal &amp; Compliance</a></span></li>
+        <li><span class="role">Co-Chair, UK &amp; European Task Force</span><span class="org">DARA</span></li>
+        <li><span class="role">Director Regional · Europa</span><span class="org">Government Blockchain Association</span></li>
+        <li><span class="role">Partner &amp; consultor</span><span class="org">Voombu</span></li>
+      </ul>
+
+      <div class="label">Trayectoria · selección</div>
+      <ul>
+        <li><span class="role">Management Board</span><span class="org">VimpelCom/VEON (NASDAQ)</span></li>
+        <li><span class="role">CCO</span><span class="org">Millicom · NSN · Tyco</span></li>
+        <li><span class="role">Counsel</span><span class="org">Dell</span></li>
+        <li><span class="role">Asociado</span><span class="org">Freshfields · PW · Arthur Andersen</span></li>
+      </ul>
+
+      <div class="label">Credenciales</div>
+      <ul>
+        <li><span class="role">Abogado colegiado</span><span class="org">España (Madrid-Barcelona) · England &amp; Wales</span></li>
+        <li><span class="role">Formación avanzada</span><span class="org">IESE · IE · Oxford Saïd · Stanford</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACTO
+     ═══════════════════════════════════════════════════ -->
+<section id="contacto">
+  <div class="contact-card">
+    <div>
+      <div class="head">§ 05 — Hablemos</div>
+      <h2>Si tu consejo tiene una decisión <em>esperando estructura,</em> empezamos por ahí.</h2>
+      <p>
+        30 minutos, sin compromiso. Llegas con el problema concreto;
+        te digo si es algo en lo que puedo ayudar — y si no, a quién
+        deberías llamar.
+      </p>
+      <a class="cta" href="mailto:enrique@enriqueaznar.com">Iniciar una conversación <span>→</span></a>
+    </div>
+    <div class="lines">
+      <div class="line"><span class="k">Email</span><span class="v"><a href="mailto:enrique@enriqueaznar.com">enrique@enriqueaznar.com</a></span></div>
+      <div class="line"><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/enriqueaznar" target="_blank" rel="noopener">linkedin.com/in/enriqueaznar</a></span></div>
+      <div class="line"><span class="k">Despacho</span><span class="v"><a href="https://aznar.legal" target="_blank" rel="noopener">aznar.legal</a></span></div>
+      <div class="line"><span class="k">Madrid</span><span class="v">Disponible para mandatos remotos y presenciales</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="foot">
+  <div>© 2026 Enrique Aznar · Todos los derechos reservados</div>
+  <div class="meta">Madrid</div>
+</footer>
+
+<!-- Smooth scroll for anchor links -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function (e) {
+    const id = this.getAttribute('href');
+    if (id === '#' || !id) return;
+    const target = document.querySelector(id);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, '', id);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
